@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi vida siempre contigo</title>
+    <link rel="stylesheet" href="sanValentin.css">
+    <link rel="icon" href="logo.png" type="image/png" sizes="64x64">
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src ="logo.png" alt="Logo" class="logo-img">
+            <spam><h2>Feliz San Valentín</h2></spam>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="viajes.html">Viajes</a></li>
+            
+
+        </ul>
+
+        <script>
+        function toggleMenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+         }
+            
+
+        </script>
+    </nav>
+
+    
+
+</body>
+</html>

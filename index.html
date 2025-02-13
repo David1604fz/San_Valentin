@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi vida siempre contigo</title>
+    <link rel="stylesheet" href="sanValentin.css">
+    <link rel="icon" href="logo.png" type="image/png" sizes="64x64">
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src ="logo.png" alt="Logo" class="logo-img">
+            <spam><h2>Feliz San Valentín</h2></spam>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="viajes.html">Viajes</a></li>
+            
+
+        </ul>
+
+        <script>
+        function toggleMenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+         }
+            
+
+        </script>
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide">
+                <img src="foto1.jpeg" alt="Foto 1">
+                <div class="caption">El inicio de nuestra historia, el primer capítulo de un amor que sigue creciendo cada día.</div>
+            </div>
+            <div class="slide">
+                <img src="foto2.jpeg" alt="Foto 2">
+                <div class="caption">Desde siempre supe que serías mi persona favorita.</div>
+            </div>
+            <div class="slide">
+                <img src="Foto3.jpeg" alt="Foto 3">
+                <div class="caption">Cada momento a tu lado se convierte en el mejor plan.</div>
+            </div>
+            <div class="slide">
+                <img src="Fondo4.jpeg" alt="Foto 4">
+                <div class="caption">Cada sonrisa vale la pena.</div>
+            </div>
+            <div class="slide">
+                <img src="foto5.jpeg" alt="Foto 5">
+                <div class="caption">Día a día me doy cuenta de lo afortunado que soy por tenerte.</div>
+            </div>
+            <div class="slide">
+                <img src="foto6.jpeg" alt="Foto 6">
+                <div class="caption">Gracias por todos los besos y abrazos.</div>
+            </div>
+            <div class="slide">
+                <img src="foto7.jpeg" alt="Foto 7">
+                <div class="caption">Tu sonrisa me mejora el día.</div>
+            </div>
+            <div class="slide">
+                <img src="foto8.jpeg" alt="Foto 8">
+                <div class="caption">Gracias por iluminar siempre mi vida.</div>
+            </div>
+            <div class="slide">
+                <img src="foto9.jpeg" alt="Foto 9">
+                <div class="caption">Eres mi más bonita casualidad.</div>
+            </div>
+            <div class="slide">
+                <img src="foto10.jpeg" alt="Foto 10">
+                <div class="caption">Me encanta estar contigo, porque es como estar soñando.</div>
+            </div>
+            <div class="slide">
+                <img src="foto11.jpeg" alt="Foto 11">
+                <div class="caption">Siempre daría lo que fuera por estar contigo, besarte y darte mucho amor.</div>
+            </div>
+            <div class="slide">
+                <img src="foto12.jpeg" alt="Foto 12">
+                <div class="caption">Quiero regalarte toda una vida de risas y sonrisas.</div>
+            </div>
+            <div class="slide">
+                <img src="foto13.jpeg" alt="Foto 13">
+                <div class="caption">Me transmite tu ilusión por la Navidad.</div>
+            </div>
+            <div class="slide">
+                <img src="foto14.jpeg" alt="Foto 14">
+                <div class="caption">Estoy seguro que me casaré contigo.</div>
+            </div>
+            <div class="slide">
+                <img src="foto15.jpeg" alt="Foto 15">
+                <div class="caption">Por lo bien que nos complementamos.</div>
+            </div>
+            
+
+
+
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+        
+        function showSlide(n) {
+            index = (n + totalSlides) % totalSlides;
+            document.querySelector(".carousel").style.transform = `translateX(-${index * 100}%)`;
+        }
+        
+        function moveSlide(n) {
+            showSlide(index + n);
+        }
+        
+        setInterval(() => moveSlide(1), 3000); // Auto slide cada 3 segundos
+    </script>
+    
+
+    <div class="contador">
+        <h1>Cada segundo contigo vale la pena</h1>
+    <div class="contador1">
+        <div class="caja">
+            <div class="numero" id="dias">0</div>
+            <div class="texto">Días</div>
+        </div>
+        <div class="caja">
+            <div class="numero" id="horas">0</div>
+            <div class="texto">Horas</div>
+        </div>
+        <div class="caja">
+            <div class="numero" id="minutos">0</div>
+            <div class="texto">Minutos</div>
+        </div>
+        <div class="caja">
+            <div class="numero" id="segundos">0</div>
+            <div class="texto">Segundos</div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function actualizarContador() {
+            const inicio = new Date("2021-01-01T18:30:00Z");
+            const ahora = new Date();
+            const diferencia = Math.floor((ahora - inicio) / 1000);
+
+            const dias = Math.floor(diferencia / (60 * 60 * 24));
+            const horas = Math.floor((diferencia % (60 * 60 * 24)) / (60 * 60));
+            const minutos = Math.floor((diferencia % (60 * 60)) / 60);
+            const segundos = diferencia % 60;
+
+            document.getElementById("dias").textContent = dias;
+            document.getElementById("horas").textContent = horas;
+            document.getElementById("minutos").textContent = minutos;
+            document.getElementById("segundos").textContent = segundos;
+        }
+
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
+    </script>
+    </div>
+
+   
+
+</body>
+</html>

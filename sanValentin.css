@@ -1,0 +1,247 @@
+body{
+    margin: 0%;
+    background-image: url(fondo.jpeg);
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(253, 245, 251, 0.8);
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 115px;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap:10px;
+
+}
+.logo-img{
+    height:40px;
+    width:auto;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.menu li {
+    margin: 0 10px;
+}
+.menu a {
+    color: rgb(116, 116, 116);
+    text-decoration: none;
+    padding: 8px 12px;
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.carousel-container {
+    position: relative;
+    max-width: 90%;
+    width: 500px;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-left: 30px;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+}
+.slide img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.caption {
+    padding: 15px;
+    background: white;
+    font-size: 16px;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.prev:hover, .next:hover { background: rgba(0, 0, 0, 0.8); }
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(253, 245, 251, 0.8);
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+    
+}
+.carousel-section {
+    margin-bottom: 50px; /* Espacio entre cada carrusel */
+}
+
+.carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-container1 {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.carousel1 {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel1 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.text-container1 {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@media (max-width: 768px) {
+    .carousel-container1 {
+        max-width: 100%;
+    }
+    .text-container1 {
+        font-size: 16px;
+    }
+}
+
+.contador {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+h1 {
+    color: white;
+    background-color: rgba(253, 245, 251, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.contador1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap; /* 🔹 Evita que los elementos bajen de línea */
+    overflow: hidden;
+}
+
+.caja {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 70px;
+    width: 90px; /* 🔹 Reduce el ancho para que quepan en móviles */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.numero {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.texto {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+/* 🔹 Ajuste para móviles */
+@media (max-width: 500px) {
+    .contador1 {
+        flex-wrap: nowrap; /* 🔹 Asegura que sigan en línea */
+        gap: 5px;
+    }
+
+    .caja {
+        width: 80px;
+        padding: 10px;
+    }
+
+    .numero {
+        font-size: 20px;
+    }
+}
